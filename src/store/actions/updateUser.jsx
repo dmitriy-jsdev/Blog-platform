@@ -8,7 +8,7 @@ export const updateUser = (username, email, password, image, token) => async (di
       user: { email, username, bio: "I'm studying to be a programmer", image, password },
     };
 
-    const response = await fetch('https://blog.kata.academy/api/user', {
+    const response = await fetch('https://blog-platform.kata.academy/api/user', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

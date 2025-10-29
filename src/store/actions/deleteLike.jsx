@@ -2,7 +2,7 @@ import { UNSET_LIKE, SET_ERROR } from './constantsActions';
 
 export const deleteLike = (slug, token) => async (dispatch) => {
   try {
-    const response = await fetch(`https://blog.kata.academy/api/articles/${slug}/favorite`, {
+    const response = await fetch(`https://blog-platform.kata.academy/api/articles/${slug}/favorite`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

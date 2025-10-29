@@ -3,7 +3,7 @@ import { START_LOADING, ARTICLE_DELETED, END_LOADING, SET_ERROR } from './consta
 export const deleteArticle = (slug, token) => async (dispatch) => {
   dispatch({ type: START_LOADING });
   try {
-    const response = await fetch(`https://blog.kata.academy/api/articles/${slug}`, {
+    const response = await fetch(`https://blog-platform.kata.academy/api/articles/${slug}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Token ${token}`,

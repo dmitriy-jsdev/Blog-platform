@@ -3,7 +3,7 @@ import { START_LOADING, ARTICLE_CREATED, END_LOADING, SET_ERROR } from './consta
 export const postArticle = (articleData, token) => async (dispatch) => {
   dispatch({ type: START_LOADING });
   try {
-    const response = await fetch('https://blog.kata.academy/api/articles', {
+    const response = await fetch('https://blog-platform.kata.academy/api/articles', {
       method: 'POST',
       headers: {
         'Authorization': `Token ${token}`,

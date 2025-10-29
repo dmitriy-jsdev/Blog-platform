@@ -3,7 +3,7 @@ import { START_LOADING, SET_ARTICLES, SET_ARTICLE, END_LOADING, SET_ERROR } from
 export const getArticles = (limit = 5, offset = 0) => async (dispatch) => {
   dispatch({ type: START_LOADING });
   try {
-    const response = await fetch(`https://blog.kata.academy/api/articles?limit=${limit}&offset=${offset}`, {
+    const response = await fetch(`https://blog-platform.kata.academy/api/articles?limit=${limit}&offset=${offset}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const getArticles = (limit = 5, offset = 0) => async (dispatch) => {
 export const getArticle= (slug) => async (dispatch) => {
   dispatch({ type: START_LOADING });
   try {
-    const response = await fetch(`https://blog.kata.academy/api/articles/${slug}`, {
+    const response = await fetch(`https://blog-platform.kata.academy/api/articles/${slug}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

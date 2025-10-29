@@ -3,7 +3,7 @@ import { START_LOADING, UPDATE_USER_DATA, END_LOADING, SET_ERROR } from './const
 export const registerUser = (username, email, password) => async dispatch => {
   dispatch({ type: START_LOADING });
   try {
-    const response = await fetch('https://blog.kata.academy/api/users', {
+    const response = await fetch('https://blog-platform.kata.academy/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import { SET_LIKE, SET_ERROR } from './constantsActions';
 
 export const addLike = (slug, token) => async (dispatch) => {
   try {
-    const response = await fetch(`https://blog.kata.academy/api/articles/${slug}/favorite`, {
+    const response = await fetch(`https://blog-platform.kata.academy/api/articles/${slug}/favorite`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
